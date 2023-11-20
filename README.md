@@ -39,3 +39,9 @@ Person(id, first_name, last_name)
 
 
 ```
+
+## Adding to your own Django project
+
+You can pip install this github repo with `pip install git+https://{URL}` and add it to your Django project by adding it to the installed_apps. 
+
+That will make the management command accessible to you.
