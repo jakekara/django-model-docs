@@ -20,7 +20,7 @@ class AppSerializer:
     """
 
     model_serializer: ModelSerializer
-    """Serialize a model section of the document"""
+    """Serialize a model as a document section"""
 
     def __init__(
         self,
@@ -31,10 +31,10 @@ class AppSerializer:
         Initialize an AppSerializer
 
         Args:
-            model_serializer: a custom ModelSerializer to use for each model.
-                              If None, uses builtin ModelSerializer
-                     columns: A custom set of columns to use when rendering tables.
-                              Overrides the columns property of the 
+            model_serializer: Optional ccustom ModelSerializer. If None, uses
+                              builtin ModelSerializer
+                     columns: A custom set of columns to use when rendering
+                              tables. Overrides the columns property of the
                               model_serializer.
         """
 
@@ -82,10 +82,7 @@ class AppSerializer:
         app_models = app_config.get_models()
 
         app_documentation = dedent(
-            f"# {self.heading(app_name)}"
-            + "\n\n"
-            + f"{self.disclaimer_text}"
-            + "\n\n"
+            f"# {self.heading(app_name)}" + "\n\n" + f"{self.disclaimer_text}" + "\n\n"
         )
 
         app_documentation += self.description(app_config) + "\n\n"

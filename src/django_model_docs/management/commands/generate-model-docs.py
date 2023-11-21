@@ -15,7 +15,7 @@ class Command(BaseCommand):
         """
         Add arguments for management command
         """
-        
+
         parser.add_argument("app", type=str, help="Django app module name")
         parser.add_argument(
             "-o",

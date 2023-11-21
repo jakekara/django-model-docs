@@ -36,8 +36,8 @@ class ModelSerializer:
 
         Args:
             Columns: A list of ColumnSerializers to use in the field
-                table. The order of the items in this list will determine
-                the order of the columns.
+                     table. The order of the items in this list will determine
+                     the order of the columns.
         """
         self.columns = columns
 
@@ -52,6 +52,7 @@ class ModelSerializer:
         """
         Text to use for the section description
         """
+
         return f"{dedent(model.__doc__)}".strip()
 
     def get_row_object(self, field: Field) -> dict:

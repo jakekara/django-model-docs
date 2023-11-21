@@ -5,7 +5,7 @@ from django.db.models.fields import Field
 class ColumnSerializer(ABC):
 
     """
-    Serializer to convert a field into a column cell content
+    Serializer to convert a model field into a column cell content
     """
 
     @property

@@ -20,20 +20,15 @@ class DataTypeColumnSerializer(ColumnSerializer):
         if choices is None:
             if isinstance(field, RelatedField):
                 cleaned_relation_type_name = format_model_name(type(field))
-                cleaned_target_model_name = format_model_name(
-                    field.related_model
-                )
+                cleaned_target_model_name = format_model_name(field.related_model)
                 type_message = (
-                    f"{cleaned_relation_type_name} "
-                    + f"-> {cleaned_target_model_name}"
+                    f"{cleaned_relation_type_name} " + f"-> {cleaned_target_model_name}"
                 )
 
             return type_message
 
         # Use special formatting for Choice and Choice-like fields
-        type_message += (
-            "<br><br>Choices (stored value : human readable)<br><br>"
-        )
+        type_message += "<br><br>Choices (stored value : human readable)<br><br>"
 
         for idx, choice_item in enumerate(choices):
             if idx > MAX_CHOICES:
