@@ -20,7 +20,7 @@ class DefaultColumnSerializer(ColumnSerializer):
         if type(field.default) == str:
             return f"'{field.default}'"
 
-        # Certain fields require a callable default (I'm looking
+        # Certain Fields require a callable default (I'm looking
         # at you ArrayField), so we want to make it [] instead of
         # `<class 'list'>` by calling any callable defaults.
         if callable(field.default):

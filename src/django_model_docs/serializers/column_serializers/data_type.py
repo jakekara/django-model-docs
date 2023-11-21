@@ -12,7 +12,9 @@ MAX_CHOICES = 75
 class DataTypeColumnSerializer(ColumnSerializer):
     name = "Data type"
 
-    def markdown(field: Field):
+    def markdown(field: Field) -> str:
+        """Get a string representing the data type of the field"""
+
         type_message = field.get_internal_type()
 
         choices = field.choices

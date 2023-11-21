@@ -10,8 +10,8 @@ class ColumnSerializer(ABC):
 
     @property
     @abstractmethod
-    def name(self):
-        return "Data Type"
+    def name(self) -> str:
+        raise NotImplementedError
 
     @abstractmethod
     def markdown(self, field: Field) -> str:
