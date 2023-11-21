@@ -15,10 +15,10 @@ pip install -e .
 
 # generate docs for model(s) in the demo app
 cd demo_django_project
-python manage.py generate_model_docs demo_django_app -o out.md
+python manage.py generate-model-docs demo_django_app
 ```
 
-The `out.md` looks like this at the moment:
+The output looks like this at the moment:
 
 ```markdown
 # `demo_django_app`` app`

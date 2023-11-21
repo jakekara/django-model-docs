@@ -15,4 +15,4 @@ class ColumnSerializer(ABC):
 
     @abstractmethod
     def markdown(self, field: Field) -> str:
-        return NotImplemented
+        raise NotImplementedError

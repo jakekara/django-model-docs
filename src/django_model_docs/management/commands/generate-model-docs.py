@@ -12,18 +12,22 @@ class Command(BaseCommand):
     """
 
     def add_arguments(self, parser):
+        """
+        Add arguments for management command
+        """
+        
         parser.add_argument("app", type=str, help="Django app module name")
         parser.add_argument(
             "-o",
             "--out-file",
             type=str,
-            required=True,
+            required=False,
             help="Name of markdown file to create",
         )
 
     def handle(self, *args, **options):
         """
-        Generate docs/data_dictionary.md file.
+        Handler for management command
         """
 
         app_name = options["app"]
@@ -31,7 +35,8 @@ class Command(BaseCommand):
 
         data_dictionary = self.app_serializer.markdown(app_name)
 
-        with open(out_file, "w") as fh:
-            fh.write(data_dictionary)
-
-        print(f"\nGenerated file: {out_file}")
+        if out_file is not None:
+            with open(out_file, "w") as fh:
+                fh.write(data_dictionary)
+        else:
+            print(data_dictionary)

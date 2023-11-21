@@ -32,9 +32,10 @@ class AppSerializer:
 
         Args:
             model_serializer: a custom ModelSerializer to use for each model.
-                If None, uses builtin ModelSerializer
-            columns: A custom set of columns to use when rendering tables.
-                Overrides the columns property of the model_serializer.
+                              If None, uses builtin ModelSerializer
+                     columns: A custom set of columns to use when rendering tables.
+                              Overrides the columns property of the 
+                              model_serializer.
         """
 
         if model_serializer is None:
