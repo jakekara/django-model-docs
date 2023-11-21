@@ -7,7 +7,7 @@ from django_model_docs.serializers.column_serializers.description import (
 
 class TestDescriptionColumnSerializer(TestCase):
     def test_description_users_help_attribute(self):
-        """Serializes non-nullable field to "False" """
+        """Serializes str description correctly"""
 
         expected_description = "expected description"
         field = models.CharField(help_text=expected_description)
@@ -16,7 +16,7 @@ class TestDescriptionColumnSerializer(TestCase):
         self.assertEqual(serializer.markdown(field), expected_description)
 
     def test_description_users_handles_None(self):
-        """Serializes non-nullable field to "False" """
+        """Serializes None description correctly"""
 
         field = models.CharField()
         serializer = DescriptionColumnSerializer
