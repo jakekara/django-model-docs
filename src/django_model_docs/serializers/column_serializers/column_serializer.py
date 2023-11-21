@@ -11,8 +11,11 @@ class ColumnSerializer(ABC):
     @property
     @abstractmethod
     def name(self) -> str:
+        """The column name"""
         raise NotImplementedError
 
+    @staticmethod
     @abstractmethod
-    def markdown(self, field: Field) -> str:
+    def markdown(field: Field) -> str:
+        """Return a markdown string representation of a Field"""
         raise NotImplementedError

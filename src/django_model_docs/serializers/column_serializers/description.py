@@ -11,4 +11,4 @@ class DescriptionColumnSerializer(ColumnSerializer):
     def markdown(field: Field) -> str:
         """Return a string describing the field."""
 
-        return field.help_text
+        return str(field.help_text)
