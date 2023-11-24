@@ -1,5 +1,20 @@
 # Generate docs for django models
 
+Generate extensible Markdown documentation for Django models. Developed for
+cross-team collaboration when iterating on on data model specifications.
+
+## User quickstart with an existing Django project
+
+Install into your project requirements (`git+https://github.com/jakekara/django-model-docs.git`)
+
+Add to the Django settings `INSTALLED_APPS`.
+
+Generate Markdown documentation `YOUR_APP`
+
+```shell
+python manage.py generate-model-docs YOUR_APP
+```
+
 ## Dev quick start
 
 ```shell
@@ -36,12 +51,4 @@ Person(id, first_name, last_name)
 |    `id`    |           |BigAutoField|  False |   -   |
 |`first_name`|           |  CharField |  False |   -   |
 | `last_name`|           |  CharField |  False |   -   |
-
-
 ```
-
-## Adding to your own Django project
-
-You can pip install this github repo with `pip install git+https://{URL}` and add it to your Django project by adding it to the installed_apps. 
-
-That will make the management command accessible to you.

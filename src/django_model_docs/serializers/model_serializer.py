@@ -11,13 +11,14 @@ from django_model_docs.serializers.column_serializers import (
     NullableColumnSerializer,
 )
 
-default_columns = [
+DEFAULT_COLUMNS = [
     FieldNameColumnSerializer,
     DescriptionColumnSerializer,
     DataTypeColumnSerializer,
     NullableColumnSerializer,
     DefaultColumnSerializer,
 ]
+"""Default columns to include when serializing a model"""
 
 
 class ModelSerializer:
@@ -30,7 +31,7 @@ class ModelSerializer:
     and a table with a row for each of the model's fields.
     """
 
-    def __init__(self, columns: list[ColumnSerializer] = default_columns):
+    def __init__(self, columns: list[ColumnSerializer] = DEFAULT_COLUMNS):
         """
         Initialize a DjangoModelSerializer
 
@@ -81,6 +82,9 @@ class ModelSerializer:
 
         Args:
             model: a Django model
+
+        Returns:
+            a mardown table representation of the model
         """
 
         # Generate a list of dictionaries, one for each field in the model.
