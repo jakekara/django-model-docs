@@ -5,7 +5,8 @@ cross-team collaboration when iterating on on data model specifications.
 
 ## User quickstart with an existing Django project
 
-Install into your project requirements (`git+https://github.com/jakekara/django-model-docs.git`)
+Install into your project requirements from github (`pip install git+https://github.com/jakekara/django-model-docs.git`) or 
+from pypi with `pip install django-model-docs`.
 
 Add to the Django settings `INSTALLED_APPS`.
 
@@ -14,6 +15,8 @@ Generate Markdown documentation `YOUR_APP`
 ```shell
 python manage.py generate-model-docs YOUR_APP
 ```
+
+That's it. The rest of this doc is for developing and extending this tool.
 
 ## Dev quick start
 
