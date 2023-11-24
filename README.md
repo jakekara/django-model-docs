@@ -8,7 +8,7 @@ cross-team collaboration when iterating on on data model specifications.
 Install into your project requirements from github (`pip install git+https://github.com/jakekara/django-model-docs.git`) or 
 from pypi with `pip install django-model-docs`.
 
-Add to the Django settings `INSTALLED_APPS`.
+Add `"demo_django_app"` to your Django app's `INSTALLED_APPS` (usually in `settings.py`).
 
 Generate Markdown documentation `YOUR_APP`
 
