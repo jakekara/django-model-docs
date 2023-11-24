@@ -28,7 +28,7 @@ class TestAppSerializer(TestCase):
                 + "|    Field   |Description|                                                          Data type                                                         |Nullable|Default|\n"
                 + "|------------|-----------|----------------------------------------------------------------------------------------------------------------------------|--------|-------|\n"
                 + "|    `id`    |           |                                                        BigAutoField                                                        |  False |   -   |\n"
-                + "|`first_name`|           |                                                          CharField                                                         |  False |   -   |\n"
+                + "|`irst_name`|           |                                                          CharField                                                         |  False |   -   |\n"
                 + "| `last_name`|           |                                                          CharField                                                         |  False |   -   |\n"
                 + "| `shoeStyle`|           |CharField<br><br>Choices (stored value : human readable)<br><br>- `LO` : `LOAFER`<br>- `BO` : `BOOT`<br>- `DR` : `DRESS`<br>|  False |   -   |\n"
                 + "\n"
